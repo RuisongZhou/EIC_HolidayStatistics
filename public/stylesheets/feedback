@@ -1,0 +1,41 @@
+<template>
+  <div>
+    <img :src="title"  id="title">
+    <div>
+      <img :src="image" id="image"><p id='feedback'>提交成功！</p>
+    </div>
+  </div>
+</template>
+
+<script>
+  export default{
+    data(){
+      return{
+        image:"http://pics.sc.chinaz.com/Files/pic/icons128/5902/t15.png",
+        title:'http://ei.hust.edu.cn/images/logo.png'
+      }
+    }
+  }
+</script>
+
+<style>
+  #feedback{
+    font-family: "Microsoft YaHei UI Light";
+    font-size:550%;
+    position:absolute;
+    top:28%;
+    right:25%;
+  }
+  #image{
+    position:absolute;
+    top:40%;
+    left:30%;
+    width:8%;
+    height:25%;
+  }
+  #title{
+    position:absolute;
+    left:28%;
+    width:50%;
+  }
+</style>
