@@ -1,0 +1,125 @@
+<template>
+  <div id="body">
+
+    <h1 id="head"><img src="http://ei.hust.edu.cn/images/logo.png" id="image">{{Head}}</h1>
+    <hr/>
+
+    <p class="text">{{Name}}</p><br/><input name="Name" type="text" class="inf"><br/>
+
+    <p class="text">{{Class}}</p><br/><input name="Class" type="text" class="inf" placeholder="如：电子信息工程1701班"><br/>
+
+    <p class="text">{{Grade}}</p><br/><select name="Grade" class="form">
+                                              <option value="2017">2017</option>
+                                              <option value="2016">2016</option>
+                                              <option value="2015">2015</option>
+                                              <option value="2014">2014</option>
+                                      </select><br/>
+
+    <p class="text">{{ID}}</p><br/><input name='ID' type="text" class="inf"><br/>
+
+    <p class="text">{{LS}}</p><br/><input name='LS' type="radio" value='是' id="left"><span id="shi">是</span>
+                                   <input name='LS' type="radio" value="否" id="right"><span id="fou">否</span><br/>
+
+    <p class="text">{{Reason}}</p><br/><input name='Reason' type="text" class="inf" placeholder="如：回家"><br/>
+
+    <p class="text">{{Destination}}</p><br/><input name='DS' type="text" class="inf" placeholder="如：湖北省武汉市"><br/>
+
+    <p class="text">{{LT}}</p><br/><input name='LT' type="date" class="form"><br/>
+
+    <p class="text">{{BT}}</p><br/><input name='BT' type="date" class="form"><br/>
+
+    <p class="text">{{Note}}</p><br/>
+                                    <textarea name='Note' style="position:absolute;left:35%" rows="10" cols="80" placeholder="请输入内容..."></textarea><br/>
+
+    <br/><input type="submit" value="Submit" id="submit">
+
+  </div>
+</template>
+
+<script>
+  export default{
+    data(){
+      return {
+        Head:"学生离校信息统计",
+        Name:'>姓名',
+        Class:">专业班级",
+        Grade:'>年级',
+        ID:'>学号',
+        LS:'>是否离校',
+        Reason:'>离校原因（不离校则“无”）',
+        Destination:'>离校去向（不离校则“无”）',
+        LT:'>离校日期（不离校则“无”）',
+        BT:'>返校时间（不离校则“无”）',
+        Note:'>注释'
+      }
+    }
+  }
+</script>
+
+<style>
+
+  .inf{
+    height: 4%;
+    border-radius: 10px;
+    width:20%;
+    position:absolute;
+    right:30%;
+  }
+
+  .form{
+    height: 4%;
+    border-radius: 10px;
+    width:10%;
+    position:absolute;
+    right:40%;
+  }
+
+  .text{
+    height: 4%;
+    width:20%;
+    position:absolute;
+    left:30%;
+    font-family:"Microsoft YaHei UI Light";
+  }
+
+  #submit{
+    height: 4%;
+    width:8%;
+    position:absolute;
+    left:50%;
+    bottom:2%;
+  }
+
+  #head{
+    font-size:30px;
+    text-align:center;
+    font-family: "Microsoft YaHei UI";
+  }
+
+  #left{
+    position:absolute;
+    right:48%;
+  }
+
+  #right{
+    position:absolute;
+    right:42%;
+  }
+
+  #image{
+    position:absolute;
+    left:4%;
+    width:30%;
+    height:10%;
+  }
+
+  #shi{
+    position:absolute;
+    right:46%;
+  }
+
+  #fou{
+    position:absolute;
+    right:40%;
+  }
+</style>
