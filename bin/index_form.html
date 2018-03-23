@@ -1,0 +1,225 @@
+ <!-- FlatFy Theme - Andrea Galanti /-->
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Flatfy Free Flat and Responsive HTML5 Template ">
+    <meta name="author" content="">
+
+    <title>Flatfy – Free Flat and Responsive HTML5 Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+ 
+    <!-- Custom Google Web Font -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+	
+    <!-- Custom CSS-->
+    <link href="css/general.css" rel="stylesheet">
+	
+	 <!-- Owl-Carousel -->
+    <link href="css/custom.css" rel="stylesheet">
+	<link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
+	<link rel="shortcut icon" href="favicon.ico">
+	
+	<!-- Magnific Popup core CSS file -->
+	<link rel="stylesheet" href="css/magnific-popup.css"> 
+	
+	<script src="js/modernizr-2.6.2.min.js"></script>  <!-- Modernizr /-->
+</head>
+
+<body id="home">
+
+	<nav class="navbar-default" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#home" style="color:black">Form</a>
+			</div>
+
+			<div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
+				<ul class="nav navbar-nav">
+					
+					<li id = 'Form' class="menuItem"><a href="#credits">常见问题</a></li>
+					<li class="menuItem"><a href="#contact">联系我们</a></li>
+				</ul>
+			</div>
+		   
+		</div>
+	</nav> 
+	
+
+	<!-- Contact -->
+	<div id="contact" class="content-section-a">
+		<div class="container">
+			<div class="row">
+			
+			<div class="col-md-6 col-md-offset-3 text-center wrap_title">
+				<h2 style="color:black">Online form</h2>
+				<p class="lead" style="margin-top:0">Statistical form</p>
+			</div>
+			
+			<form Id = 'infos' role="form" action="" method="post" >
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="InputName" style="color:black">姓名</label>
+						<div style="color:black"  class="input-group">
+							<input name="name" type="text" class="form-control" name="InputName" id="InputName" placeholder="Enter Name" required>
+							<span id = "namespan" class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="InputClass" style="color:black">班级</label>
+						<div class="input-group">
+							<select id="InputClass" name="class" type="text" class="form-control" required>
+									<option ></option>
+									<option value="提高1701">提高1701</option>
+									<option value="卓越1701">卓越1701</option>
+									<option value="电信1701">电信1701</option>
+									<option value="电信1702">电信1702</option>
+									<option value="电信1703">电信1703</option>
+									<option value="电信1704">电信1704</option>
+									<option value="电信1705">电信1705</option>
+									<option value="电磁1701">电磁1701</option>
+									<option value="电磁1702">电磁1702</option>
+									<option value="电磁1703">电磁1703</option>
+									<option value="通信1701">通信1701</option>
+									<option value="通信1702">通信1702</option>
+									<option value="通信1703">通信1703</option>
+									<option value="通信1704">通信1704</option>
+									<option value="通信1705">通信1705</option>
+							</select>
+							<span id = "classspan"class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+						</div>
+					</div>
+					
+
+					<div class="form-group">
+						<label for="InputGrade" style="color:black">年级</label>
+						<div class="input-group">
+							<select id="InputGrade" name="grade" type="text" class="form-control" required>
+								<option ></option>
+								<option value="2017">2017级</option>
+								<option value="2016">2016级</option>
+								<option value="2015">2015级</option>
+								<option value="2014">2014级</option>
+							</select>
+							<span id = "gradespan" class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="InputLeave_is" style="color:black">是否离校</label>
+						<div class="input-group">
+							是：<input name="leave_school" type="radio" id="InputLeave_is" value = 'Y' required><br>
+							否：<input name="leave_school" type="radio" id="InputLeave_is" value = 'N' required>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="InputLeaveTime" style="color:black">离校时间</label>
+						<div class="input-group">
+							<input name="leave_time" type="date" class="form-control" id="InputLeaveTime" placeholder="Enter Time" required>
+							<span id = "leavetimespan" class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="InputBackTime" style="color:black">返校时间</label>
+						<div class="input-group">
+							<input input name="back_time" type="date" class="form-control" id="InputBackTime" placeholder="Enter Time" required>
+							<span id = "backtimespan" class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="InputLeaveFor" style="color:black">离校去向</label>
+						<div class="input-group">
+							<input name="leave_for" type="text" class="form-control" id="InputLeaveFor" placeholder="Enter Place" required>
+							<span id = "leaveforspan" class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+						</div>
+					</div>
+
+					
+					<div class="form-group">
+						<label for="InputResult" style="color:black">离校原因</label>
+						<div class="input-group">
+							<textarea name='leave_reason' id="InputResult" class="form-control" rows="5" placeholder="Enter Result" required></textarea>
+							<span id = "leavereasonspan" class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="InputMessage" style="color:black">备注</label>
+						<div class="input-group">
+							<textarea name="note" id="InputMessage" class="form-control" rows="5" placeholder="Enter Note"></textarea>
+							<span id = "notespan" class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+						</div>
+					</div>
+
+					<input type="submit" name="submit" id="submit" value="提交" class="btn wow tada btn-embossed btn-primary pull-right">
+				</div>
+			</form>
+			
+			<hr class="featurette-divider hidden-lg">
+				<div class="col-md-5 col-md-push-1 address">
+					<address>
+					<h3>技术支持</h3><br>
+					<p ><a>电子信息与通信学院<br>
+					科协技术部 | 办公室<br>
+					Institute of electronic information and communication<br>
+					Science and Technology Association | Office<br>
+					Ministry of Technology</a><br>
+					</li>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+	<script src="js/owl.carousel.js"></script>
+	<script src="js/script.js"></script>
+	<!-- StikyMenu -->
+	<script src="js/stickUp.min.js"></script>
+	<script type="text/javascript">
+	  jQuery(function($) {
+		$(document).ready( function() {
+		  $('.navbar-default').stickUp();
+		  
+		});
+	  });
+	
+	</script>
+	<!-- Smoothscroll -->
+	<script src="js/wow.min.js"></script>
+	<script>
+	 new WOW().init();
+	</script>
+	<script src="js/classie.js"></script>
+	<script src="js/uiMorphingButton_inflow.js"></script>
+	<!-- Magnific Popup core JS file -->
+	<script src="js/jquery.magnific-popup.js"></script> 
+	<script type="text/javascript" src="index_form.js"></script>
+</body>
+
+</html>
