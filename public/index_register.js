@@ -125,7 +125,7 @@ addEvent(document.getElementById('login'),"submit", function(event) {
         alert('两次密码不一致，请重新输入');
         form.logpass.focus();
     }
-    else if (form.logpass.value.length<6) {
+    else if (form.logpass.value.length<7) {
         alert('密码长度应不小于6位');
         form.logpass.focus();
     }else if (!RegExp(form.code.value).test(code)){

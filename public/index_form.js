@@ -70,7 +70,7 @@ addEvent(document.getElementById('infos'),"submit", function(event) {
     info.name = form.name.value;
     info.class = form.class.value;
     info.grade = form.grade.value;
-    info.StudentID = window.location.hash.substr(1,10);
+    info.StudentID = location.search.substr(1,10);
     info.leave_school = form.leave_school.value;
     info.leave_reason = form.leave_reason.value;
     info.leave_for = form.leave_for.value;
@@ -90,75 +90,3 @@ addEvent(document.getElementById('infos'),"submit", function(event) {
     });
 }
 , false);
-
-addEvent(document.getElementById('InputName'),"input", function(event) {
-    //namespan填写判断
-    forbiddenEvent(event);
-    var han = /^[\u4e00-\u9fa5]{2,4}+$/;
-    namespan = document.getElementById('namespan')
-    InputName = document.getElementById('InputName')
-    if (han.test(InputName.value)) {
-        namespan.style = "background-color:rgb(27, 201, 149)"
-    }
-}
-, false);
-
-addEvent(document.getElementById('InputClass'),"input", function(event) {
-    //classspan填写判断
-    forbiddenEvent(event);
-    classspan = document.getElementById('classspan')
-    classspan.style = "background-color:rgb(27, 201, 149)"
-}
-, false);
-
-addEvent(document.getElementById('InputGrade'),"input", function(event) {
-    //gradespan填写判断
-    forbiddenEvent(event);
-    gradesspan = document.getElementById('gradesspan')
-    gradesspan.style = "background-color:rgb(27, 201, 149)"
-}
-, false);
-
-addEvent(document.getElementById('InputLeaveTime'),"input", function(event) {
-    //leavetimespan填写判断
-    forbiddenEvent(event);
-    leavetimespan = document.getElementById('leavetimespan')
-    leavetimespan.style = "background-color:rgb(27, 201, 149)"
-}
-, false);
-
-addEvent(document.getElementById('InputBackTime'),"input", function(event) {
-    //backtimespan填写判断
-    forbiddenEvent(event);
-    backtimespan = document.getElementById('backtimespan')
-    backtimespan.style = "background-color:rgb(27, 201, 149)"
-}
-, false);
-
-addEvent(document.getElementById('InputLeaveFor'),"input", function(event) {
-    //leaveforspan填写判断
-    forbiddenEvent(event);
-    var han = /^[\u4e00-\u9fa5]+$/;
-    leaveforspan = document.getElementById('leaveforspan')
-    InputLeaveFor = document.getElementById('InputLeaveFor')
-    if (han.test(InputLeaveFor.value)) {
-        leaveforspan.style = "background-color:rgb(27, 201, 149)"
-    }
-}
-, false);
-
-addEvent(document.getElementById('InputResult'),"input", function(event) {
-    //leavereasonspan填写判断
-    forbiddenEvent(event);
-    leavereasonspan = document.getElementById('leavereasonspan')
-    leavereasonspan.style = "background-color:rgb(27, 201, 149)"
-}
-, false);
-addEvent(document.getElementById('InputMessage'),"input", function(event) {
-    //notespan填写判断
-    forbiddenEvent(event);
-    notespan = document.getElementById('notespan')
-    notespan.style = "background-color:rgb(27, 201, 149)"
-}
-, false);
-

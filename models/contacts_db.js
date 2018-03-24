@@ -19,44 +19,38 @@ MongoClient.connect(ConfigSet.DATABASE_URL, (err, client) => {
 })
 
 exports.addContact = async function (params) {
-    //表单的提交
+    //确定集合infos
     if ("name" in params){
-        var collection = db.collection("infos");//操作infos集合
+        var collection = db.collection("infos");
         let userinfo = collection.find({"StudentID": params.StudentID}).toArray(function(err,array){
             if (err){
                 throw err;
             }else{
                 console.log(array)
-                if (array.length!=0){//如果表单信息已存在，更新数据
+                if (array.length!=0){
                     collection.update({"StudentID":params.StudentID},params,{'multi':false})
-                }else{//如果不存在，存入数据
+                }else{
                     collection.insert(params)
                 }
             }
         });
         console.log('Done');
         return [];
-    //注册的提交
     }else if(params.stat == 'regist'){
-        var collection = db.collection("users");//操作user集合
-        let user = {//获取注册信息
+        var collection = db.collection("users");
+        let user = {
             "StudentID": params.StudentID,
             "password": params.password
         }
-        let userinfo = collection.find({"StudentID": params.StudentID}).toArray(function (err,arr){
-            if (err){
-                throw err;
-            }else{//如果学生信息不存在，存入数据库
-                if (arr.length==0){
-                    collection.insert(user);
-                }
-            }
-        });
+        let userinfo = collection.find({"StudentID": params.StudentID}).toArray();
+        collection.insert(user);
+        console.log('Done');
         return userinfo;
-    }else{//登陆的验证
-        var collection = db.collection("users");//操作user集合
+    }else{
+        console.log(params);
+        var collection = db.collection("users");
         let userinfo = collection.find({"StudentID":params.StudentID}).toArray();
-        return userinfo;//如果学号已存在，返回已存在的学生注册信息
+        return userinfo;
     }
     return true;
 }

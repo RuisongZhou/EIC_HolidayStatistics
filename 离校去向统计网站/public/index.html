@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <title>通讯录</title>
+</head>
+
+<body>
+    <form name="addInf" class="add-inf-form" Id='infom'>
+        姓名:<input type="text" name="name" placeholder="松松" autofocus required><br>
+        班级:<select name="class">
+            <option value="请填写">请填写</option>
+            <option value="提高1701">提高1701</option>
+            <option value="卓越1701">卓越1701</option>
+            <option value="电信1701">电信1701</option>
+            <option value="电信1702">电信1702</option>
+            <option value="电信1703">电信1703</option>
+            <option value="电信1704">电信1704</option>
+            <option value="电信1705">电信1705</option>
+            <option value="电磁1701">电磁1701</option>
+            <option value="电磁1702">电磁1702</option>
+            <option value="电磁1703">电磁1703</option>
+            <option value="通信1701">通信1701</option>
+            <option value="通信1702">通信1702</option>
+            <option value="通信1703">通信1703</option>
+            <option value="通信1704">通信1704</option>
+            <option value="通信1705">通信1705</option>
+        </select><br>
+        年级:<select name="grade">
+                <option value="请填写">请填写</option>
+                <option value="2017">2017级</option>
+                <option value="2016">2016级</option>
+                <option value="2015">2015级</option>
+                <option value="2014">2014级</option>
+            </select><br>
+        学号:<input type="text" name="ID" placeholder="U201700000" required><br>
+        是否离校:<input type="radio" name="leave_school" value="Y" required>是<input type="radio" name="leave_school" value="N">否<br>
+        离校原因:<input type="text" name="leave_reason" placeholder="回家"><br>
+        离校去向:<input type="text" name="leave_for" placeholder="省市"><br>
+        离校时间:<input type="date" name="leave_time"><br>
+        返校时间:<input type="date" name="back_time"><br>
+        备注:<input type="text" name="note" placeholder="备注"><br>
+        <input type="submit" value="提交" id="submitInfo">
+    </form>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+
+
+</html>
