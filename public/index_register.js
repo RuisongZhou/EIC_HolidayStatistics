@@ -51,6 +51,7 @@ function getData(method, url, queryString, fnc) { //获取JSON数据
     //改变状态，调用函数
     xmlhttp.onreadystatechange = fnc;
 }
+
 var wait=60;
 function time(o) {  
     if (wait == 0) {  
@@ -91,9 +92,9 @@ addEvent(document.getElementById('get'),"click", function(event) {
     }else{
         info.StudentID = form.logname.value
         alert("验证码已发往您的华中大邮箱")
+        time(document.getElementById('get'))
     }
-    time(document.getElementById('get'))
-    getData("PUT", "http://localhost:3030/students", JSON.stringify(info), function() {
+    getData("PUT", "http://118.190.207.113:3030/students", JSON.stringify(info), function() {
         if (xmlhttp.readyState == 4) {
             if (xmlhttp.status == 200) {
                 code = xmlhttp.responseText
@@ -136,15 +137,17 @@ addEvent(document.getElementById('login'),"submit", function(event) {
     info.StudentID = form.logname.value;
     info.password = form.logpass.value;
     //POST表单json数据到服务器
-    getData("POST", "http://localhost:3030/students", JSON.stringify(info), function() {
+    getData("POST", "http://118.190.207.113:3030/students", JSON.stringify(info), function() {
         if (xmlhttp.readyState == 4) {
             if (xmlhttp.status == 200) {
-                if (RegExp("regist success").test(xmlhttp.responseText)){
-                    alert('注册成功');
-                    window.location.href = "index_form.html?"+form.logname.value;
-                }else{
+                if (RegExp("regist failed").test(xmlhttp.responseText)){
+                    console.log(xmlhttp.responseText);
                     alert('该学生已被注册');
                     form.logname.focus();
+                }else{
+                    alert('注册成功');
+                    document.write(xmlhttp.responseText);
+                    window.location.hash = form.logname.value
                 }
             } else {
                 console.log("发生错误" + xmlhttp.status);
