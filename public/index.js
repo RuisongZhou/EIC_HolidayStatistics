@@ -70,16 +70,17 @@ addEvent(document.getElementById('login'),"submit", function(event) {
     info.StudentID = form.logname.value;
     info.password = form.logpass.value;
     //POST表单json数据到服务器
-    getData("POST", "http://localhost:3030/students", JSON.stringify(info), function() {
+    getData("POST", "http://118.190.207.113:3030/students", JSON.stringify(info), function() {
         if (xmlhttp.readyState == 4) {
             if (xmlhttp.status == 200) {
-                if (RegExp("login failed").test(xmlhttp.responseText)){
+                if (!StudentIDPattern.test(form.logname.value)) {
+                }else if (RegExp("login failed").test(xmlhttp.responseText)){
                     alert('密码错误');
                 }else if(RegExp("no user").test(xmlhttp.responseText)){
                     alert('用户不存在，请先注册');
                 }else{
-                    window.location.href="http://localhost:3030?"+form.logname.value;
                     document.write(xmlhttp.responseText);
+                    window.location.hash = form.logname.value
                 }
             } else {
                 console.log("发生错误" + xmlhttp.status);

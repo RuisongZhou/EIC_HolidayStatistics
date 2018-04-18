@@ -1,1 +1,0 @@
-# HUST EIC HolidayStatistics
